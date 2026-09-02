@@ -15,12 +15,16 @@ function App() {
       
       <Header/>
 
+      <main className='h-[calc(100vh-5rem)] py-2 px-4 md:px-6 bg-blue-200'>
+
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/sign-up" element={<SignUp/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path='/blogs' element={<Blogs/>}></Route>
       </Routes>
+
+      </main>
 
       <Footer/>
       
