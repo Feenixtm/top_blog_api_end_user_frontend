@@ -6,9 +6,16 @@
     padding-bottom: 0.375rem;
 }
 
-.form-button:hover {
+.form-button:hover, .add-comment-btn:hover {
     color: white;
     background-color: black;
     cursor: pointer;
 }
 
+.link-tag {
+    text-decoration: underline;
+}
+
+.link-tag:hover {
+    color: purple;
+}

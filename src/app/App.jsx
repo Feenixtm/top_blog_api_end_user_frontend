@@ -7,6 +7,7 @@ import Blogs from '../features/blogs/components/Blogs'
 
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
+import Blog from '../features/blog/components/Blog.jsx'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path='/blogs' element={<Blogs/>}></Route>
+        <Route path='/blogs/:id' element={<Blog/>}></Route>
       </Routes>
 
       </main>

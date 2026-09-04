@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
@@ -39,6 +40,7 @@ const Blogs = () => {
               <div key={`${blog.title}-${index}`} className="flex flex-col items-center p-4 gap-2 border w-full max-w-[325px]">
                 <h2 className="font-semibold italic">{ blog.title.toLocaleUpperCase() }</h2>
                 <p className="text-center">{ blog.content }</p>
+                <Link to={`/blogs/${ blog.id }`}><span className="link-tag">View Blog</span></Link>
               </div>
             )
           })
