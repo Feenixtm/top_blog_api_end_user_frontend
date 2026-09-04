@@ -28,19 +28,22 @@ const Blogs = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-2 px-4 my-4">
       <h1 className="text-[1.75rem] font-semibold">Blogs</h1>
-      <span>{ backendMessage }</span>
+      <span className="mb-4">{ backendMessage }</span>
 
-      {
-        allBlogs && allBlogs.map((blog, index) => {
-          return (
-            <div>
-              <h2>{ blog.name }</h2>
-            </div>
-          )
-        })
-      }
+      <div className="flex justify-center flex-wrap gap-4">
+        {
+          allBlogs && allBlogs.map((blog, index) => {
+            return (
+              <div key={`${blog.title}-${index}`} className="flex flex-col items-center p-4 gap-2 border w-full max-w-[325px]">
+                <h2 className="font-semibold italic">{ blog.title.toLocaleUpperCase() }</h2>
+                <p className="text-center">{ blog.content }</p>
+              </div>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }

@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import '../styles/App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../features/home/components/Home'
 import SignUp from '../components/forms/SignUp'
 import Login from '../components/forms/Login'
@@ -15,7 +14,7 @@ function App() {
       
       <Header/>
 
-      <main className='flex justify-center h-[calc(100vh-5rem)] py-2 px-4 md:px-6 bg-blue-200'>
+      <main className='flex justify-center min-h-[calc(100vh-5rem)] py-2 px-4 md:px-6 bg-blue-200'>
 
       <Routes>
         <Route path="/" element={<Home/>}></Route>
